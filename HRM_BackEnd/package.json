@@ -1,0 +1,67 @@
+{
+  "name": "backend-nodejs",
+  "version": "1.0.0",
+  "description": "Backend nodejs",
+  "main": "server.js",
+  "scripts": {
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives",
+    "format": "prettier --write .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./src/server.js",
+    "start": "node ./src/server.js",
+    "seed:policies": "node src/seeds/seedPolicies.js",
+    "prepare": "husky",
+    "lint-staged": "lint-staged"
+  },
+  "keywords": [
+    "nodejs",
+    "react"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "axios": "^1.13.2",
+    "bcrypt": "5.1.1",
+    "connect-mongo": "^5.1.0",
+    "cors": "2.8.5",
+    "dotenv": "16.4.5",
+    "ejs": "3.1.10",
+    "express": "4.19.2",
+    "express-session": "^1.18.2",
+    "fs": "^0.0.1-security",
+    "i18next": "^25.5.2",
+    "i18next-fs-backend": "^2.6.0",
+    "i18next-http-middleware": "^3.8.0",
+    "jsonwebtoken": "9.0.2",
+    "mongoose": "^8.4.4",
+    "mongoose-sequence": "^6.0.1",
+    "node-cron": "^4.2.1",
+    "nodemailer": "^6.10.1",
+    "openai": "^6.9.1",
+    "passport": "^0.7.0",
+    "passport-azure-ad": "^4.3.5",
+    "passport-google-oauth20": "^2.0.0",
+    "path": "^0.12.7",
+    "pdf.js-extract": "^0.2.1",
+    "pdf2pic": "^3.2.0",
+    "resend": "^6.5.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@eslint/js": "^9.35.0",
+    "eslint": "^9.35.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.6",
+    "nodemon": "3.1.4",
+    "prettier": "^3.6.2"
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run lint",
+      "npm run format"
+    ]
+  }
+}

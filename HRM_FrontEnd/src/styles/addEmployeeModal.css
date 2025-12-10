@@ -1,0 +1,123 @@
+.modal-header-icon {
+  font-size: 24px;
+}
+/* Custom scrollbar */
+.add-employee-modal .ant-modal-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.add-employee-modal .ant-modal-body::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 3px;
+}
+
+.add-employee-modal .ant-modal-body::-webkit-scrollbar-thumb {
+  background: #d9d9d9;
+  border-radius: 3px;
+}
+
+.add-employee-modal .ant-modal-body::-webkit-scrollbar-thumb:hover {
+  background: #bfbfbf;
+}
+
+.add-employee-modal .ant-modal-footer {
+  border-top: 1px solid #f0f0f0;
+  padding: 16px 24px;
+}
+
+/* Form Styles */
+.employee-form .ant-form-item-label > label {
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+.employee-form .ant-input,
+.employee-form .ant-input-affix-wrapper,
+.employee-form .ant-picker,
+.employee-form .ant-select-selector {
+  border-radius: 8px;
+  border: 1.5px solid #d9d9d9;
+  transition: all 0.3s ease;
+}
+
+.employee-form .ant-input:hover,
+.employee-form .ant-input-affix-wrapper:hover,
+.employee-form .ant-picker:hover,
+.employee-form .ant-select-selector:hover {
+  border-color: #667eea;
+}
+
+.employee-form .ant-input:focus,
+.employee-form .ant-input-affix-wrapper:focus,
+.employee-form .ant-input-focused,
+.employee-form .ant-picker-focused,
+.employee-form .ant-select-focused .ant-select-selector {
+  border-color: #667eea;
+  box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+}
+
+.employee-form .ant-input-prefix,
+.employee-form .ant-picker-suffix {
+  color: #667eea;
+  font-size: 16px;
+}
+
+/* Validation */
+.employee-form .ant-form-item-explain-error {
+  font-size: 12px;
+  color: #ff4d4f;
+  margin-top: 4px;
+}
+
+.employee-form .ant-form-item-has-error .ant-input,
+.employee-form .ant-form-item-has-error .ant-input-affix-wrapper,
+.employee-form .ant-form-item-has-error .ant-picker,
+.employee-form .ant-form-item-has-error .ant-select-selector {
+  border-color: #ff4d4f !important;
+}
+
+/* TextArea */
+.employee-form .ant-input-textarea-show-count::after {
+  color: #8c8c8c;
+  font-size: 12px;
+}
+
+/* Gender Select */
+.employee-form .ant-select-item-option-content .ant-space {
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .add-employee-modal .ant-modal {
+    max-width: calc(100vw - 32px);
+    margin: 16px auto;
+  }
+
+  .add-employee-modal .ant-modal-body {
+    padding: 16px;
+  }
+
+  .modal-header {
+    font-size: 16px;
+  }
+
+  .modal-header-icon {
+    font-size: 20px;
+  }
+}
+
+/* Loading State */
+.modal-ok-button.ant-btn-loading {
+  opacity: 0.8;
+}
+
+/* Focus visible for accessibility */
+.employee-form .ant-input:focus-visible,
+.employee-form .ant-input-affix-wrapper:focus-visible,
+.employee-form .ant-picker:focus-visible,
+.employee-form .ant-select-selector:focus-visible {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
