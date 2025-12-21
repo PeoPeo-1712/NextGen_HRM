@@ -1,6 +1,8 @@
 const nodemailer = require("nodemailer");
 const { Resend } = require("resend");
 
+const EMAIL_HOST = (process.env.EMAIL_HOST || "").trim();
+const EMAIL_PORT = (process.env.EMAIL_PORT || "").trim();
 const EMAIL_USER = (process.env.EMAIL_USER || "").trim();
 const EMAIL_APP_PASS = (process.env.EMAIL_APP_PASS || "").trim();
 const RESEND_API_KEY = (process.env.RESEND_API_KEY || "").trim();
@@ -38,8 +40,8 @@ if (!isProd) {
 const createEtherealTransporter = async () => {
   const testAccount = await nodemailer.createTestAccount();
   return nodemailer.createTransport({
-    host: "smtp.ethereal.email",
-    port: 587,
+    host: EMAIL_HOST, // Sẽ lấy 'smtp.gmail.com' từ Railway
+    port: EMAIL_PORT || 587,
     auth: {
       user: testAccount.user,
       pass: testAccount.pass,
