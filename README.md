@@ -453,16 +453,24 @@ npm run lint
 
 ---
 
-## 🔄 Repository Structure
-
-```
-NextGen_HRM/
-├── HRM_BackEnd/           # Independent backend project
-├── HRM_FrontEnd/          # Independent frontend project
-├── SETUP.md               # This file - Complete documentation
-└── README.md              # Original project README
+## Account for Demo
+```bash
+Admin:
+  Gmail: admin@gmail.com
+  PassWord: Admin123
 ```
 
+```bash
+Manager:
+  Gmail: manager@gmail.com
+  PassWord: Manager123
+```
+
+```bash
+Staff:
+  Gmail: staff@gmail.com
+  PassWord: Staff123
+```
 ---
 
 ## 📚 Additional Resources
